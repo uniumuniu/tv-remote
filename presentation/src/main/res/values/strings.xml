@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="turn_on_label">TURN ON</string>
+    <string name="turn_off_label">TURN OFF</string>
+    <string name="volume_up_label">VOLUME UP</string>
+    <string name="volume_down_label">VOLUME DOWN</string>
+    <string name="next_channel_label">NEXT CHANNEL</string>
+    <string name="previous_channel_label">PREVIOUS CHANNEL</string>
+    <string name="arrow_up_label">ARROW UP</string>
+    <string name="arrow_down_label">ARROW DOWN</string>
+    <string name="arrow_left_label">ARROW LEFT</string>
+    <string name="arrow_right_label">ARROW RIGHT</string>
+    <string name="ok_label">OK</string>
+    <string name="back_label">BACK</string>
+    <string name="invalid_token_title">Invalid token</string>
+    <string name="missing_token_title">Missing token</string>
+    <string name="generic_error_title">Something went wrong</string>
+    <string name="error_message">Please close the app and scan QR on the TV with your smartphone camera</string>
+    <string name="close_label">CLOSE</string>
+</resources>

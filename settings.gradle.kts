@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "tv-remote"
 include(":app")
- 
+include(":domain")
+include(":data")
+include(":presentation")

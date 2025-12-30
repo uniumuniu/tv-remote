@@ -1,23 +1,18 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.dagger.hilt)
     id("kotlin-kapt")
 }
 
 android {
-    namespace = "com.uniumuniu.tv.remote"
+    namespace = "com.uniumuniu.tv.remote.presentation"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.uniumuniu.tv.remote"
         minSdk = 24
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -27,16 +22,13 @@ android {
             isMinifyEnabled = false
         }
     }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-
     kotlinOptions {
         jvmTarget = "11"
     }
-
     buildFeatures {
         compose = true
     }
@@ -47,22 +39,21 @@ android {
 }
 
 dependencies {
-    val composeBom = platform(libs.compose.bom)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
+    implementation(libs.material)
+    implementation(project(":domain"))
+
+    testImplementation(libs.junit)
+    testImplementation(libs.mockk)
+    testImplementation(libs.kotlinx.coroutines.test)
+
+    val composeBom = platform(libs.compose.bom)
     implementation(composeBom)
     implementation(libs.material3)
     implementation(libs.material3.adaptive)
     implementation(libs.ui.tooling.preview)
-    implementation(libs.activity.compose)
     implementation(libs.lifecycle.viewmodel.compose)
-    implementation(project(":presentation"))
-    implementation(project(":data"))
-    implementation(project(":domain"))
-
-    testImplementation(libs.junit)
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -75,5 +66,4 @@ dependencies {
     // dagger + hilt
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.android)
-    implementation(libs.hilt.navigation)
 }
