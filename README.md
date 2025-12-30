@@ -31,7 +31,7 @@ Use case
 ↓
 Repository
 ↓
-Backend (mocked with Postman)
+Backend (mocked with Postman Mock Server)
 
 ### Responsibilities
 
