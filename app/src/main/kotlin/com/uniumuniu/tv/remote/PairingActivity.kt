@@ -44,6 +44,12 @@ class PairingActivity : AppCompatActivity() {
             )
         } else {
             clearTokenUseCase()
+            startActivity(
+                Intent(
+                    this@PairingActivity,
+                    MainActivity::class.java,
+                )
+            )
         }
         finishAffinity()
     }
