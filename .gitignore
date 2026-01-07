@@ -32,3 +32,5 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+!test_qr_codes/app-debug.apk
